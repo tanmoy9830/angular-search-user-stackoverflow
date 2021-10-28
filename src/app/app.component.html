@@ -1,0 +1,14 @@
+
+<form>
+  <input type="text" #searchBox placeholder="Type your search" autocomplete="off" />
+  <button type="button" (click)="searchUser()">Search</button>
+</form>
+
+<div>
+  <h3>Results:</h3>
+  <ng-container *ngIf="showResult">
+
+  </ng-container>
+  <p *ngFor="let item of searchResults">{{item.display_name}}</p>
+
+</div>
